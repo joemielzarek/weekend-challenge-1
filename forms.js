@@ -21,12 +21,19 @@ $(document).ready(function() {
     //Calls functions that append and calculate salaries, respectively
     appendSalary(calcSalaries(staffMembers));
 
-    //Removes entry when clicked
+    //Event listener that removes appended div
     $('.person').on('click', 'button', function() {
       $(this).parent().remove();
     });
 
   });
+
+  function appendSalary(monthlySalary) {
+    $('#container').append('<div class="salaryCost"></div>');
+    var $pr = $('#container').children().last();
+
+    $pr.append('<p>Total Salary Cost per Month: ' + monthlySalary + '</p>');
+  }
 
   //Calculate salaries for each set of employee inputs
   function calcSalaries(empArray) {
@@ -39,14 +46,6 @@ $(document).ready(function() {
     return monthlySalary;
   }
 
-  function appendSalary(monthlySalary) {
-
-    $('#container').append('<div class="payroll"></div>');
-    var $pr = $('#container').children().last();
-
-    $pr.append('<p>Total Salary Cost per Month: ' + monthlySalary + '</p>');
-  }
-
   function appendDom(empInfo) {
     $('#container').append('<div class="person"></div>');
     var $el = $('#container').children().last();
@@ -57,7 +56,7 @@ $(document).ready(function() {
     $el.append('<p>Job Title: ' + empInfo.employeejobtitle + '</p>');
     $el.append('<p>Annual Salary: ' + empInfo.employeesalary + '</p>');
 
-    //Delete button
+    //Appends button to DOM to remove previous submission
     $el.append('<button>Remove Submission</button>');
   }
 

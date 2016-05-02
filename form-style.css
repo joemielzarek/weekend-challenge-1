@@ -25,5 +25,55 @@ p {
 	font-size: 12px;
 }
 
+button {
+  display: block;
+  background: #004162;
+  border-radius: 3px;
+  border: 1px solid #004162;
+  color: #fff;
+  cursor: pointer;
+  font: 13px helvetica, sans-serif;
+  left: 10%;
+  padding: 10px 30px 10px 30px;
+  position: absolute;
+  top: 46%;
+  transition-duration: 0.4s;
+}
 
+button:hover {
+  background: #FFF;
+  color: #004162;
+  border: 1px solid #004162;
+}
+
+input[type="submit"] {
+  display: inline;
+  background: #004162;
+  border-radius: 3px;
+  border: 1px solid #004162;
+  color: #fff;
+  cursor: pointer;
+  left: 10%;
+  font: 13px helvetica, sans-serif;
+  padding: 10px 39px 10px 39px;
+  position: absolute;
+  top: 40%;
+  transition-duration: 0.4s;
+}
+
+input[type="submit"]:hover {
+  background: #FFF;
+  color: #004162;
+  border: 1px solid #004162;
+}
+
+#container {
+  margin-top: 150px;
+  max-width: 60%;
+
+}
+
+.salaryCost {
+  border-bottom: 1px solid black;
+}
 
