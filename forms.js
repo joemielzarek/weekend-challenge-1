@@ -1,14 +1,14 @@
-$(document).ready(function() {
+
+$(document).ready(function () {
   var staffMembers = [];
 
-  $('#employeeinfo').on('submit', function(event) {
+  $('#employeeinfo').on('submit', function (event) {
     event.preventDefault();
 
     var values = {};
-    $.each($('#employeeinfo').serializeArray(), function(i, field) {
+    $.each($('#employeeinfo').serializeArray(), function (i, field) {
       values[field.name] = field.value;
-
-    })
+    });
 
     $('#employeeinfo').find('input[type=text]').val('');
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
     appendSalary(calcSalaries(staffMembers));
 
     //Event listener that removes appended div
-    $('.person').on('click', 'button', function() {
+    $('.person').on('click', 'button', function () {
       $(this).parent().remove();
     });
 
@@ -30,9 +30,9 @@ $(document).ready(function() {
 
   function appendSalary(monthlySalary) {
     $('#container').append('<div class="salaryCost"></div>');
-    var $pr = $('#container').children().last();
+    var salaryCost = $('#container').children().last();
 
-    $pr.append('<p>Total Salary Cost per Month: ' + monthlySalary + '</p>');
+    salaryCost.append('<p>Total Salary Cost per Month: ' + monthlySalary + '</p>');
   }
 
   //Calculate salaries for each set of employee inputs
@@ -43,6 +43,7 @@ $(document).ready(function() {
       totalSalary += parseInt(empArray[i].employeesalary);
       monthlySalary = Math.round(totalSalary / 12);
     }
+
     return monthlySalary;
   }
 
@@ -61,4 +62,3 @@ $(document).ready(function() {
   }
 
 });
-

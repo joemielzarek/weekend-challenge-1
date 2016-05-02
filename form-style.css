@@ -2,8 +2,6 @@ body {
 	margin: 100px auto auto 100px;
 	background-color: gray;
 	font-weight: lighter;
-
-
 }
 
 h1 {
@@ -70,10 +68,8 @@ input[type="submit"]:hover {
 #container {
   margin-top: 150px;
   max-width: 60%;
-
 }
 
 .salaryCost {
   border-bottom: 1px solid black;
 }
-
