@@ -1,18 +1,29 @@
+body {
+	margin: 100px auto auto 100px;
+	background-color: gray;
+	font-weight: lighter;
+
+
+}
+
 h1 {
-  color: teal;
+	font-family: helvetica;
+	color: black;
+	font-size: 20px;
+
 }
 
-#container {
-  border: 1px solid blue;
-  padding: 10px;
-  margin: 30px;
+h2 {
+	font-family: helvetica;
+	color: black;
+	font-size: 15px;
 }
 
-.person {
-  border: 2px solid black;
-  padding: 2px;
+p {
+	font-family: helvetica;
+	color: black;
+	font-size: 12px;
 }
 
-.clicked {
-  border-color: red;
-}
+
+
