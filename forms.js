@@ -29,12 +29,11 @@ $(document).ready(function() {
   });
 
   //Calculate salaries for each set of employee inputs
-  function calcSalaries(array) {
+  function calcSalaries(empArray) {
     var totalSalary = 0;
     var monthlySalary = 0;
-    for (var i = 0; i < array.length; i++) {
-      console.log(array[i]);
-      totalSalary += parseInt(array[i].employeesalary);
+    for (var i = 0; i < empArray.length; i++) {
+      totalSalary += parseInt(empArray[i].employeesalary);
       monthlySalary = Math.round(totalSalary / 12);
     }
     return monthlySalary;
