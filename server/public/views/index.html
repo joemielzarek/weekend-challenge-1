@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Salary Cost Calculator</title>
+    <link rel='stylesheet' href='../styles/stylesheet.css' />
+    <script type='text/javascript' src='../vendor/jquery.min.js'></script>
+    <script type='text/javascript' src='../scripts/client.js'></script>
+  </head>
+<body>
+  <h1>Employee Data Inputs</h1>
+  <div>
+    <form id='employeeInfo'>
+      <p><label for='firstName'>Employee First Name:</label>
+        <input type='text' id='firstName' name='firstName' /></p>
+      <p><label for='lastName'>Employee Last Name:</label>
+        <input type='text' id='lastName' name='lastName' /></p>
+      <p><label for='empId'>Employee ID :</label>
+        <input type='text' id='empId' name='empId' /></p>
+      <p><label for='jobTitle'>Employee Job Title:</label>
+        <input type='text' id='jobTitle' name='jobTitle' /></p>
+      <p><label for='salaryPerYear'>Employee Salary per Year:</label>
+        <input type='text' id='salaryPerYear' name='salaryPerYear' /></p>
+      <input type='submit' value='Submit Employee' id='submit'/>
+
+    </form>
+    <div id="container">
+      <div id="monthly-container">
+      </div>
+    </div>
+    <table id='employee-table'>
+    </table>
+  </div>
+</body>
+</html>

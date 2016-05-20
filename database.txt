@@ -1,0 +1,9 @@
+-- CREATE Employees TABLE --
+CREATE TABLE employees (
+	id SERIAL PRIMARY KEY,
+	first_name varchar(100),
+	last_name varchar(100),
+  emp_id INTEGER,
+  job_title varchar(100),
+  salary_per_year INTEGER
+);
